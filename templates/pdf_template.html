@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header img {
+      width: 100px;
+    }
+
+    .info {
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+
+    th, td {
+      border: 1px solid #444;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="{{ url_for('static', filename='logo1.png') }}" alt="Logo Gauche">
+    <div class="info">
+      <h1>Université de Technologie</h1>
+      <h3>Faculté d'Informatique</h3>
+      <h6>Année universitaire 2024/2025</h6>
+    </div>
+    <img src="{{ url_for('static', filename='logo2.png') }}" alt="Logo Droite">
+  </div>
+
+  <hr>
+
+  <h2 style="text-align:center;">Relevé de notes de l'étudiant</h2>
+  <p><strong>Nom :</strong> Jean Dupont</p>
+  <p><strong>Matricule :</strong> 2024001234</p>
+  <p><strong>Filière :</strong> Informatique</p>
+
+  <table>
+    <tr>
+      <th>Module</th>
+      <th>Note</th>
+      <th>Coefficient</th>
+      <th>Moyenne pondérée</th>
+    </tr>
+    <tr>
+      <td>Mathématiques</td>
+      <td>15</td>
+      <td>4</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>Programmation</td>
+      <td>18</td>
+      <td>5</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>Base de données</td>
+      <td>14</td>
+      <td>3</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th colspan="3">Total</th>
+      <th>192</th>
+    </tr>
+  </table>
+
+</body>
+</html>
